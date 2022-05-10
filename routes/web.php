@@ -16,3 +16,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/index', [
+    'as' => 'showPokenea', 'uses' => 'PokeneaController@showPokenea'
+]);
+
+$router->get('/pokecontent', [
+    'as' => 'showMultimedia', 'uses' => 'PokeneaController@showMultimedia'
+]);
